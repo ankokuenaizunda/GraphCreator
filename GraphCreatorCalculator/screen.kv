@@ -1,0 +1,102 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            id : btn_1
+            text: 'Linear'
+            on_press: root.manager.current = 'aline'
+        Button:
+            id : btn_2
+            text: 'Quadratic'
+            on_press: root.manager.current = 'quard'
+        Button:
+            id : btn_3
+            text: 'Inverse'
+            on_press: root.manager.current = 'inverse'
+        Button:
+            id : btn_4
+            text: 'Close'
+<AlinearScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label :
+            text: 'y = ax + b'
+        TextInput:
+            id : txt_xmin
+            text : "Xmin = "
+        TextInput:
+            id : txt_xmax
+            text : "Xmax = "
+        TextInput:
+            id : txt_num
+            text : "Num = "
+        TextInput:
+            id : txt_a
+            text : "a = "
+        TextInput:
+            id : txt_b
+            text : "b = "
+        Button:
+            id : btn_5
+            text: 'execute'
+            on_press: root.pressedExecute()
+        Button:
+            id : btn_6
+            text: 'main'
+            on_press: root.manager.current = 'main'
+<QuadraticScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label :
+            text: 'y = ax^2 + bx + c'
+        TextInput:
+            id : txt_xmin
+            text : "Xmin = "
+        TextInput:
+            id : txt_xmax
+            text : "Xmax = "
+        TextInput:
+            id : txt_num
+            text : "Num = "
+        TextInput:
+            id : txt_a
+            text : "a = "
+        TextInput:
+            id : txt_b
+            text : "b = "
+        TextInput:
+            id : txt_c
+            text : "c = "
+        Button:
+            id : btn_7
+            text: 'execute'
+            on_press: root.pressedExecute()
+        Button:
+            id : btn_8
+            text: 'main'
+            on_press: root.manager.current = 'main'
+<InverseScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label :
+            text: 'y = a/x'
+        TextInput:
+            id : txt_xmin
+            text : "Xmin = "
+        TextInput:
+            id : txt_xmax
+            text : "Xmax = "
+        TextInput:
+            id : txt_num
+            text : "Num = "
+        TextInput:
+            id : txt_a
+            text : "a = "
+        Button:
+            id : txt_9
+            text: 'execute'
+            on_press: root.pressedExecute()
+        Button:
+            id : btn_10
+            text: 'main'
+            on_press: root.manager.current = 'main'
